@@ -64,19 +64,83 @@
           </div>
         </header>
         <!-- MAIN kısmı burada -->
-        <main>
+        <main>          
           <!-- Hero kısmı burada -->
           <section class="hero">
-            
+            <div class="hero">
+            <div id="formModal" class="form-wrapper">
+                <!-- Burada form olacak -->
+                <a href="" class="modal__close">
+                    <svg class="" width="8" height="8" viewBox="0 0 24 24">
+                        <use xlink:href="./images/symbol-defs.svg#icon-kapat"></use>
+                    </svg>
+                </a>
+                <p class="centered-text"><br>
+                    Leave your contact and we will call you back</p>
+                <div class="form">
+                    <label class="form_label" for="name">
+                        Name
+                            <div class="input-with-icon">
+                                <svg class="input-with-icon__icon" aria-hidden="true">
+                                <use xlink:href="./images/symbol-defs.svg#icon-isim"></use>
+                                </svg>
+                                <input id="name" type="text" class="input-with-icon__field" placeholder="">
+                            </div>
+                    </label>
+                </div>
+
+                <div class="form">
+                    <label class="form_label" for="name">
+                        Phone
+                            <div class="input-with-icon">
+                                <svg class="input-with-icon__icon" aria-hidden="true">
+                                <use xlink:href="./images/symbol-defs.svg#icon-telefon"></use>
+                                </svg>
+                                <input id="telefon" type="text" class="input-with-icon__field" placeholder="">
+                            </div>
+                    </label>
+                </div>
+
+                <div class="form">
+                    <label class="form_label" for="name">
+                        Email
+                            <div class="input-with-icon">
+                                <svg class="input-with-icon__icon" aria-hidden="true">
+                                <use xlink:href="./images/symbol-defs.svg#icon-posta"></use>
+                                </svg>
+                                <input id="mail" type="text" class="input-with-icon__field" placeholder="">
+                            </div>
+                    </label>
+                </div>
+
+                <div class="form">
+                    <label class="form_label" for="name">
+                        Comment
+                            <div class="input-with-icon">
+                                
+                                <textarea id="comment" class="form-textarea" rows="6" placeholder="Text input"></textarea>
+
+                            </div>
+                    </label>
+                </div>
+                <div class="form__consent">
+              <input type="checkbox" id="consent" class="form__checkbox">
+              <label for="consent" class="form__consent-text">
+                I accept the terms and conditions of the
+                <a href="#" class="form__privacy-link">Privacy Policy</a>
+              </label>
+            </div>
+                <div>
+              <a href="" class="send-btn">Send</a>
+            </div>
+            </div>
             <div>
               <h1>Effective Solutions<br />for Your Bussiness</h1>
             </div>
             <div>
-              <a href="" class="hero__cta">Order Service</a>
+              <a href="#formModal" class="hero__cta">Order Service</a>
             </div>
-
-            
-
+            </div>
           </section>
           <!-- Hero bitti -->
 
@@ -410,6 +474,20 @@
                   </li>
                 </ul>
               </div>
+              <div class="footer-subscribe">
+                Subscribe
+                <br><br> 
+                <div class="subscribe-form">
+                  <input id="mailsubscribe" type="text" class="input-field-subscribe" placeholder="E-Mail">
+
+                  <div class="subscribe-btn">
+                    Subscribe
+                    <svg class="subscribe-icon" width="24" height="20" viewBox="0 0 38 32">
+                      <use xlink:href="./images/symbol-defs.svg#icon-subscribe"></use>
+                    </svg>
+                  </div>
+                </div>
+                
             </div>
           </footer>
         </main>

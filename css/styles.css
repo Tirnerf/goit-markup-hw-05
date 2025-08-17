@@ -299,70 +299,7 @@ font-family: "Raleway", sans-serif;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
 }
-.footer-section {
-    background-color: #2E2F42;
-    
-    width: 100%;
-    margin: 0 auto;
-}
 
-.footer-main {
-    display: flex;
-    justify-content: flex-start;  /* sola hizala, arada boşluk bırak */
-    align-items: flex-start;
-    gap: 100px; /* aradaki boşluğu ayarla, gerekirse artır/azalt */
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 60px 150px ; /* üst/alt 60px sağ/sol 48px boşluk */
-    box-sizing: border-box;
-    text-align: left;
-}
-.footer{
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    flex-direction: column; /* Dikey hizalama */ 
-    padding: 156px;
-    gap: 20px; /* Elemanlar arası boşluk */
-    width: 1440px;
-    height: 312px;    
-    background-color:  #2E2F42;
-}
-.footer-text {
-    width: 264px;
-}
-.footer-social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-left: 40px;
-}
-.footer-social-title {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-.logo-studio-footer{
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    color: #f4f4fd;
-    text-transform: uppercase;
-    letter-spacing: 3PX;
-    text-decoration: none;
-}
-.footer-logotext{    
-    margin-top: 18px;
-    font-size: 12px;
-    color: #f4f4fd;
-    font-weight: 300;
-    letter-spacing: 2%;
-    line-height: 24px;
-
-}
 .icon-clock, .icon-antenna, .icon-astronaut, .icon-diagram {
     width: 64px;
     height: 64px;
@@ -475,3 +412,292 @@ font-family: "Raleway", sans-serif;
 }
 
 
+.form-wrapper {
+    display:none;  
+    position: fixed;
+  margin:70px ;
+  width: 408px;
+  height: 584px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Roboto;
+font-style: Medium;
+line-height: 24px;
+letter-spacing: 2%;
+color: #2E2F42;
+z-index: 999;
+}
+#formModal:target {
+  display: block;
+}
+.centered-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+
+.open-btn {
+  padding: 10px 20px;
+  background: #4D5AE5;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.modal__close {
+  position: absolute;
+  top: 8px;    /* kutunun üstünden boşluk */
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: #E7E9FC;
+  border: 1px solid #0000001A;
+  display: flex;            /* ikonun ortalanması için */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal__close .icon {
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+}
+
+.form { 
+    width: 360px; 
+    margin: 0 auto 16px;
+}
+
+.form_label {
+  display: block;       /* kendi satırına gelsin */
+  text-align: left;     /* sola hizala */  
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;  
+  color: #8E8F99;
+
+  padding: 0px 0px;     /* yazıya oturan arka plan */
+  margin-bottom: 8px;
+}
+
+.input-with-icon { position: relative; }
+
+/* Input: 360x40, kenarlıklar */
+.input-with-icon__field{
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #2E2F4266;
+  padding: 0 12px 0 36px;   /* ikona yer aç */
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.input-with-icon__field:focus{
+  border: 1px solid #4D5AE5;
+}
+
+/* Sol ikon konumu */
+.input-with-icon__icon{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  opacity: 1;
+  fill: currentColor;
+  color: #2E2F42;
+}
+.form-textarea {
+  width: 100%;
+  border: 1px solid #2E2F4266;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;        /* boyut değiştirilemez */
+  height: auto;        /* rows="4" değerine göre yüksekliği alır */
+}
+
+.send-btn{ 
+    margin-top: 20px;;
+    width: 169px;
+  height: 56px;
+    padding:16px 24px; 
+    border-radius:4px; 
+    background:#4d5ae5; 
+    color:#fff; 
+    text-decoration:none; 
+    box-shadow: 0px 4px 4px 0px #00000026;
+    display:inline-block; }
+
+.send-btn:hover {
+  background: #3b49c9; /* üzerine gelince biraz koyulaşsın */
+}
+.form__actions {
+  display: flex;
+  justify-content: center; /* yatay ortalama */
+  margin-top: 24px;        /* üstten biraz boşluk */
+}
+.form__consent{
+  width: 360px;          /* diğer inputlarla aynı genişlik */
+  margin: 12px auto 0;   /* üstten boşluk, ortalı */
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.form__checkbox{
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;       /* metinle hizalama */
+}
+
+.form__consent-text{
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #8E8F99;
+  letter-spacing: 0.5px;
+}
+
+.form__privacy-link{
+  color: #4D5AE5;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
+.footer-section {
+    background-color: #2E2F42;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: flex-start;  /* sola hizala, arada boşluk bırak */
+    align-items: flex-start;
+    gap: 100px; /* aradaki boşluğu ayarla, gerekirse artır/azalt */
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 150px ; /* üst/alt 60px sağ/sol 48px boşluk */
+    box-sizing: border-box;
+    text-align: left;
+}
+.footer{
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    flex-direction: column; /* Dikey hizalama */ 
+    padding: 156px;
+    gap: 20px; /* Elemanlar arası boşluk */
+    width: 1440px;
+    height: 312px;    
+    background-color:  #2E2F42;
+}
+.footer-text {
+    width: 264px;
+}
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-left: 40px;
+}
+.footer-social-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.logo-studio-footer{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #f4f4fd;
+    text-transform: uppercase;
+    letter-spacing: 3PX;
+    text-decoration: none;
+}
+.footer-logotext{    
+    margin-top: 18px;
+    font-size: 12px;
+    color: #f4f4fd;
+    font-weight: 300;
+    letter-spacing: 2%;
+    line-height: 24px;
+
+}
+
+.footer-subscribe {
+display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* yukarıya hizala */
+  align-items: flex-start;     /* sola hizala */
+  width: 453px;
+  height: 80px;
+  
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: normal; /* Medium yerine normal */
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em; /* %2 karşılığı */
+}
+
+
+.input-field-subscribe{  
+  width: 264px;
+    height: 40px;
+    background-color: #2E2F42;
+    border: #FFFFFF 1px solid;
+    border-radius: 4px;
+  font-size: 14px; 
+  color:#FFFFFF;
+  padding: 0 12px; /* içeriği kenarlardan ayır */
+  
+}
+.subscribe-form {
+  display: flex;
+  gap: 12px; /* input ile buton arasındaki boşluk */
+  align-items: center;
+}
+
+.subscribe-btn {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: 8px;              /* yazı ile ikon arası */
+  background: #4D5AE5;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
+  transition: background 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background: #3b49c9; /* hover efekti */
+}
+
+.subscribe-icon {
+  fill: currentColor; /* ikonun rengi yazıyla aynı olur */
+}
